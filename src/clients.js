@@ -4,7 +4,7 @@ import * as Style from './styled'
 
 export default function Clients(){
     const clients = JSON.parse(localStorage.getItem('client')) || [];
-    let [data, setData] = useState(clients);
+    let data = useState(clients);
 
     const [name, setName] = useState("");
     const [cpf, setCPF] = useState("");
@@ -78,7 +78,7 @@ export default function Clients(){
                         <label>Contato</label>
                             <input
                                 placeholder="(XX)XXXXX-XXXX)"
-                                onChange={e => setEmail(e.target.value)} />
+                                onChange={e => setContact(e.target.value)} />
                     </Style.DataField>
                     <input type="submit" value="Cadastrar" />
                     <Link to='/'>
@@ -87,23 +87,23 @@ export default function Clients(){
                 </Style.RegisterForm>
             </form>
             <Style.Title>Lista Cadastrada</Style.Title>
-            <Style.container>
+            <Style.Container>
                 <Style.Text width={"300px"}>Nome</Style.Text>
                 <Style.Text width={"150px"}>CPF</Style.Text>
                 <Style.Text width={"150px"}>Nascimento</Style.Text>
                 <Style.Text width={"210px"}>Email</Style.Text>
                 <Style.Text width={"330px"}>Endereço</Style.Text>
                 <Style.Text width={"150px"}>Contato</Style.Text>
-            </Style.container>
+            </Style.Container>
             {data.map(client => (
-                <Style.container key={client.id}>
+                <Style.Container key={client.id}>
                     <Style.Text width={"300px"}>{client.name}</Style.Text>
                     <Style.Text width={"150px"}>{client.cpf}</Style.Text>                    
                     <Style.Text width={"150px"}>{client.birthday}</Style.Text>
                     <Style.Text width={"210px"}>{client.email}</Style.Text>
                     <Style.Text width={"330px"}>{client.address}</Style.Text>
                     <Style.Text width={"150px"}>{client.contact}</Style.Text>
-                </Style.container>
+                </Style.Container>
             ))}
         </section>
     )

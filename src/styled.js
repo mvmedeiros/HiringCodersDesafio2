@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const container = styled.div`
+export const Container = styled.div`
     background: #abab;
     word-wrap: break-word;
     display: flex;

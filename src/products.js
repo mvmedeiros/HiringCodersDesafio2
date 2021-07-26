@@ -80,21 +80,21 @@ export default function Products(){
             </form>
             
             <Style.Title>Lista Cadastrada</Style.Title>
-            <Style.container>
+            <Style.Container>
                 <Style.Text width={"300px"}>Nome</Style.Text>
                 <Style.Text width={"150px"}>Categoria</Style.Text>
                 <Style.Text width={"150px"}>Marca</Style.Text>
                 <Style.Text width={"210px"}>Quantidade</Style.Text>
                 <Style.Text width={"330px"}>Preço (R$)</Style.Text>
-            </Style.container>
+            </Style.Container>
             {data.map(product => (
-                <Style.container key={product.id}>
+                <Style.Container key={product.id}>
                     <Style.Text width={"300px"}>{product.name}</Style.Text>
                     <Style.Text width={"150px"}>{product.category}</Style.Text>                    
                     <Style.Text width={"150px"}>{product.brand}</Style.Text>
                     <Style.Text width={"210px"}>{product.quantity}</Style.Text>
                     <Style.Text width={"330px"}>{product.price}</Style.Text>
-                </Style.container>
+                </Style.Container>
             ))}
         </section>
     )

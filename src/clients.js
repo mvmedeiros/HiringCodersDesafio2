@@ -4,7 +4,7 @@ import * as Style from './styled'
 
 export default function Clients(){
     const clients = JSON.parse(localStorage.getItem('client')) || [];
-    let data = useState(clients);
+    let [data, setData] = useState(clients);
 
     const [name, setName] = useState("");
     const [cpf, setCPF] = useState("");
